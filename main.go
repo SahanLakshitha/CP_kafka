@@ -164,7 +164,7 @@ func main() {
 
 	msgCount := 0
 
-	// Get signal for finish
+	
 	doneCh := make(chan struct{})
 	go func() {
 		for {
@@ -190,7 +190,7 @@ func main() {
 					fmt.Println(err)
 				}
 
-				// Convert native Go form to textual Avro data
+				
 				textual, err := codec.TextualFromNative(nil, native)
 				if err != nil {
 					fmt.Println(err)
